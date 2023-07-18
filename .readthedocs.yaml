@@ -5,5 +5,5 @@ build:
   tools:
     python: "3.9"
   jobs:
-    post_install:
-      - echo ${testitest}
+    install:
+      - pip install -r requirements.txt
