@@ -5,12 +5,21 @@
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+SOURCEDIR     = .
+BUILDDIR      = _build
+PYTHON        = python3
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+htmlview: html
+	@ls
+	$(PYTHON) -c "import webbrowser; from pathlib import Path; \
+	webbrowser.open(Path('_build/html/index.html').resolve().as_uri())"
+
+watch: htmlview
+	watchmedo shell-command -p '*.rst' -c 'make html' -R -D
 
 .PHONY: help Makefile
 
