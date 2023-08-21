@@ -23,7 +23,7 @@ each provided by a component that can be used independently and has a different 
   Communications between nodes are TLS encrypted using `shoset <https://github.com/ditrit/shoset>`_.
 - **Persistence** (wip_unstable): Applicative objects are persisted as well as user files. 
   Those resources are shared across the clusters to increase resiliency. 
-  To achieve this, BaDaaS uses the :doc:`BaDORM <badorm/index>` component.
+  To achieve this, BaDaaS uses the :doc:`badaas-orm <badaas-orm/index>` component.
 - **Querying Resources** (unstable): Resources are accessible via a REST API.
 - **Posix compliant** (stable): Badaas strives towards being a good unix citizen and 
   respecting commonly accepted norms. (see :doc:`badaas/configuration`)
@@ -41,21 +41,24 @@ Learn how to use BaDaaS following the :doc:`badaas/quickstart`.
    badaas/configuration
 
 .. toctree::
-   :caption: BaDctl
+   :caption: Badaas-orm
 
-   badctl/index
-   badctl/installation
-   badctl/commands
+   badaas-orm/index
+   badaas-orm/quickstart
+   badaas-orm/tutorial
+   badaas-orm/concepts
+   badaas-orm/declaring_models
+   badaas-orm/connecting_to_a_database
+   badaas-orm/crud
+   badaas-orm/query
+   badaas-orm/advanced_query
+   badaas-orm/preloading
+   badaas-orm/logger
 
 .. toctree::
-   :caption: BaDORM
+   :caption: Contributing
 
-   badorm/index
-   badorm/quickstart
-   badorm/concepts
-   badorm/declaring_models
-   badorm/connecting_to_a_database
-   badorm/crud
-   badorm/query
-   badorm/advanced_query
-   badorm/preloading
+   contributing/contributing
+   contributing/developing
+   contributing/maintaining
+   Github <https://www.github.com/ditrit/badaas>
