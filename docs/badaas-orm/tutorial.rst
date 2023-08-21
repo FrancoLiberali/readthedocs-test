@@ -51,7 +51,7 @@ In `sqlite:db` you will find a sqlite database with the following data:
      - 25171
      - 0c4404f6-83c2-4bdf-93d5-a5ff2fe4f921
 
-As you can see, there are two cities Paris in this database: 
+As you can see, there are two cities called Paris in this database: 
 the well known Paris, capital of France and site of the iconic Eiffel tower, 
 and Paris in the United States of America, site of the Eiffel tower with the cowboy hat 
 (no joke, just search for paris texas eiffel tower in your favorite search engine).
@@ -118,7 +118,7 @@ Tutorial 3: joins
 Although in the previous tutorial we achieved our goal of differentiating the two Paris, 
 the way to do it is debatable since the population of the cities can evolve and, 
 then, the result of this query can change. 
-Therefore, we are now going to improve this query by obtaining a city called 
+Therefore, we are now going to improve this query by obtaining the city called 
 Paris whose country is called France. 
 
 In the tutorial_3.go file you will find that we can perform this query as follows:
