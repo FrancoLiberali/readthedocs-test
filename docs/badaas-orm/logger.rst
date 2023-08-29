@@ -2,10 +2,20 @@
 Logger
 ==============================
 
-When connecting to the database, i.e. when creating the `orm.DB` object, 
+When connecting to the database, i.e. when creating the `gorm.DB` object, 
 it is possible to configure the type of logger to use, the logging level, among others. 
 As explained in the :ref:`connection section <badaas-orm/connecting_to_a_database:Connection>`, 
-this can be done by using the `orm.Open` method. 
+this can be done by using the `orm.Open` method:
+
+.. code-block:: go
+
+  gormDB, err = orm.Open(
+    dialector,
+    &gorm.Config{
+      Logger: logger.Default,
+    },
+  )
+
 Any logger that complies with `logger.Interface` can be configured.
 
 Log levels
@@ -110,6 +120,3 @@ will be the one finally used.
 .. code-block:: bash
 
   DEBUG	fx/example.go:107	query_exec	{"elapsed_time": "3.291981ms", "rows_affected": "1", "sql": "SELECT products.* FROM \"products\" WHERE products.int = 1 AND \"products\".\"deleted_at\" IS NULL"}
-
-
-
